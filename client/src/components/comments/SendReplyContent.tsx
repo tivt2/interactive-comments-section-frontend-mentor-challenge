@@ -92,11 +92,7 @@ export function SendReplyContent({
       )}
       <CommentTextArea
         textRef={textRef}
-        text={
-          type === "REPLY" && possibleReplyingTo[0]
-            ? `@${possibleReplyingTo[0]} `
-            : ""
-        }
+        text={type === "REPLY" ? `@${possibleReplyingTo[0]} ` : ""}
         additionalStyles=" col-span-2 -order-1 resp:order-none resp:col-span-1"
       />
       <EndButton

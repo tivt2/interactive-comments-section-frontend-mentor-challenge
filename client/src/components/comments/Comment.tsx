@@ -134,7 +134,6 @@ export function Comment({
               count={score}
               scoreMark={isScore}
               onPlus={() => {
-                console.log("+");
                 handleScoreChange(
                   isScore === "+"
                     ? score - 1
@@ -145,7 +144,6 @@ export function Comment({
                 setIsScore((oldScore) => (oldScore === "+" ? "" : "+"));
               }}
               onMinus={() => {
-                console.log("-");
                 handleScoreChange(
                   isScore === "-"
                     ? score + 1
@@ -169,14 +167,12 @@ export function Comment({
                 <IconButton
                   type="DELETE"
                   onClick={() => {
-                    console.log("deleting");
                     setIsDeleting(true);
                   }}
                 />
                 <IconButton
                   type="EDIT"
                   onClick={() => {
-                    console.log("editing");
                     setIsEditing((state) => !state);
                   }}
                 />
@@ -186,7 +182,6 @@ export function Comment({
                 additionalStyles="col-span-1 justify-self-end resp:col-span-1 resp:row-span-1 resp:order-3"
                 type="REPLY"
                 onClick={() => {
-                  console.log("replying");
                   setIsRepling((state) => !state);
                 }}
               />
@@ -195,7 +190,6 @@ export function Comment({
               <EndButton
                 type="UPDATE"
                 onClick={() => {
-                  console.log("edited");
                   setIsEditing(false);
                   handleEdit();
                 }}
@@ -213,7 +207,7 @@ export function Comment({
                     user.username,
                     ...replies.map((reply) => reply.user.username),
                   ]
-                : undefined
+                : [user.username]
             }
             handleReply={setIsRepling}
             additionalStyles="opacity-0 transition-all duration-150"
