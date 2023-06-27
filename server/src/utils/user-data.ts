@@ -144,7 +144,6 @@ const scoreComment = (
 
 export {
   getJSONData,
-  getJSONData2,
   postJSONData,
   insertNewComment,
   deleteComment,
