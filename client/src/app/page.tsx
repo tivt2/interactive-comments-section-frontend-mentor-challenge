@@ -13,6 +13,17 @@ export default function Home() {
           <CommentsSection />
         </QueryClientProvider>
       </LocalStorageProvider>
+      <p className=" mt-4 text-center w-full max-w-xl">
+        Project using render.com free server, if loading please wait server to
+        wake up, in the mean time visit the{" "}
+        <a
+          className=" font-medium text-primaryBlue"
+          href="https://github.com/tivt2/interactive-comments-section-frontend-mentor-challenge"
+        >
+          project repo
+        </a>
+        .
+      </p>
     </main>
   );
 }
