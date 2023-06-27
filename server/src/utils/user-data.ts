@@ -2,24 +2,6 @@ import fs from "fs";
 import { TComment, TJsonData, TNewComment } from "../types/user-comments";
 
 function getJSONData(filePath: string) {
-  const data = fs.readFile(filePath, "utf-8", (err, data) => {
-    if (err) {
-      console.error("Error reading JSON file:", err);
-      return { error: "Error reading JSON file" };
-    }
-    try {
-      const parsedData = JSON.parse(data);
-      console.log("Parsed data successfuly from path:", filePath);
-      return parsedData;
-    } catch (err) {
-      console.error("Error trying to parse data from path:", filePath);
-      return { error: "Error trying to parse data" };
-    }
-  });
-  return data;
-}
-
-function getJSONData2(filePath: string) {
   try {
     const data = fs.readFileSync(filePath, "utf-8");
     console.log("Parsed data successfuly from path:", filePath);

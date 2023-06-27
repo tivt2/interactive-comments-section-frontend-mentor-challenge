@@ -8,16 +8,13 @@
     "prestart": "npm run build",
     "start": "node dist/server.js",
     "predev": "rm -r dist",
-    "dev": "npx tsc -w & nodemon dist/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "vercel-build": "echo hello"
+    "dev": "npx tsc -w & nodemon dist/server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "json-server": "^0.17.3"
+    "express": "^4.18.2"
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",

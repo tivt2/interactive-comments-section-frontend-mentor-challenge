@@ -4,14 +4,13 @@ import {
   deleteComment,
   editComment,
   getJSONData,
-  getJSONData2,
   insertNewComment,
   scoreComment,
 } from "./utils/user-data";
 
 const userPath = "data.json";
 
-const initialData = getJSONData2(userPath);
+const initialData = getJSONData(userPath);
 let userData = initialData;
 
 const app = express();
